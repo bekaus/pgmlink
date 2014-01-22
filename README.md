@@ -55,8 +55,8 @@ on Linux and
 
 ```
 g++ -fpic -shared -Wl,-all_load libcplex.a -Wl,-noall_load -o libcplex.dylib
-g++ -fpic -shared -Wl,-all_load libilocplex.a -Wl,-noall_load -o libilocplex.dylib
 g++ -fpic -shared -Wl,-all_load libconcert.a -Wl,-noall_load -o libconcert.dylib
+g++ -fpic -shared -Wl,-all_load libilocplex.a -Wl,-noall_load -L/PATH/TO/CONCERT/LIB -L/PATH/TO/CPLEX/LIB -lconcert -lcplex -o libilocplex.dylib
 ```
 on Mac respectively.
 
